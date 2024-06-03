@@ -29,6 +29,19 @@ public class Book extends Product {
         this.publishedYear = publishedYear;
     }
 
+    public Book(int id, String name, int price, String author, int pages, int publishedYear) {
+        super(id, name, price);
+        this.author = author;
+        this.pages = pages;
+        this.publishedYear = publishedYear;
+    }
+
+
+    @Override
+    public void use() {
+        System.out.println("Читаем книгу: " + name);
+    }
+
     @Override
     public boolean isTooExpensive() {
         if (price > 10_000) {
@@ -36,5 +49,8 @@ public class Book extends Product {
         } else {
             return false;
         }
+
+
     }
+
 }

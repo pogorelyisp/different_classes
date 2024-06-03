@@ -5,6 +5,12 @@ public class Product {
     protected String name;
     protected int price;
 
+    public Product(int id, String name, int price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+
     public int getId() {
         return id;
     }
@@ -27,6 +33,11 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public void use() {
+        System.out.println("Продукт " + name + "используется");
+
     }
 
     public boolean isTooExpensive() {        // метод проверки на дороговизну товара
